@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0B0B45;
   width: 100vw;
 }
 
 header, footer {
   font-family: 'Codystar', cursive;
 }
+

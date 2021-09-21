@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { likeFalse, likeTrue } from "../../services/displayLike";
-import "./Post.css"
+import "./Post.css";
 
 const Post = ({ post }) => {
   const { copyright, date, explanation, hdurl, title } = post;
@@ -13,11 +13,17 @@ const Post = ({ post }) => {
 
   return (
     <div className="post">
-      <h4>{copyright}</h4>
-      <img src={hdurl} alt={title} height="500" />
-      <button onClick={() => setLike(!like)}>{displayLike}</button>
+      <div className="post-image">
+        <img src={hdurl} alt={title} />
+      </div>
+      <div className="copy-like">
+        <h4>{copyright}</h4>
+        <div className="button">
+        <button onClick={() => setLike(!like)}>{displayLike}</button>
+          </div>
+      </div>
       <p>
-        <span>{title}</span>
+        <span>{title}</span><br></br>
         {explanation}
       </p>
       <h5>{date}</h5>

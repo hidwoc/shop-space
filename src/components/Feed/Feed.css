@@ -5,3 +5,7 @@ main {
   align-items: center;
   width: 90vh;
 }
+
+.loading {
+  height: 80vh;
+}

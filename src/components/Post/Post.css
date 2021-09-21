@@ -5,9 +5,34 @@
   align-items: center;
 }
 
+.post-image {
+  max-width: 90vw;
+}
+
+.post-image img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.copy-like {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.copy-like h4 {
+  width: 50%;
+}
+
+div.button {
+  width: 50%
+}
 button {
   background-color: #0B0B45;
   border: none;
+  right: 0;
 }
 
 p {
