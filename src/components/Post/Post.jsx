@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { likeFalse, likeTrue } from "../../services/displayLike";
+import "./Post.css"
 
 const Post = ({ post }) => {
   const { copyright, date, explanation, hdurl, title } = post;
@@ -11,7 +12,7 @@ const Post = ({ post }) => {
   }, [like]);
 
   return (
-    <div>
+    <div className="post">
       <h4>{copyright}</h4>
       <img src={hdurl} alt={title} height="500" />
       <button onClick={() => setLike(!like)}>{displayLike}</button>

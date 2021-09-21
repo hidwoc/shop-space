@@ -1,12 +1,19 @@
-.layout {
+.post {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0B0B45;
-  width: 100vw;
 }
 
-header, footer {
-  font-family: 'Codystar', cursive;
+button {
+  background-color: #0B0B45;
+  border: none;
+}
+
+p {
+  font-size: 15px;
+}
+
+span {
+  font-weight: bold;
 }

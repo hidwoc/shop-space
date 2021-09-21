@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Post from "../Post/Post";
 import { apiURL } from "../../services/apiConfig";
+import "./Feed.css"
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
