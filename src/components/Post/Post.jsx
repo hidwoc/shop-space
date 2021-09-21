@@ -1,49 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { likeFalse, likeTrue } from "../../services/displayLike";
 
 const Post = ({ post }) => {
-  const { copyright, date, explanation, hdurl, url, title, media_type } = post;
+  const { copyright, date, explanation, hdurl, title } = post;
   const [like, setLike] = useState(false);
-  const [displayLike, setDisplayLike] = useState(
-    <img
-      src={`${process.env.PUBLIC_URL}/assets/graphics/icons8-heart-100.png`}
-    />
-  );
-
-  const display = () => {
-    if (media_type === "video") {
-      return (
-        <video height="500" autoplay>
-          <source src={url} type="video/mp4" />
-        </video>
-      );
-    } else {
-      return <img src={hdurl} alt={title} height="500" />;
-    }
-  };
+  const [displayLike, setDisplayLike] = useState(likeFalse);
 
   useEffect(() => {
-    like
-      ? setDisplayLike(
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/graphics/icons8-heart-100-filled.png`}
-          />
-        )
-      : setDisplayLike(
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/graphics/icons8-heart-100.png`}
-          />
-        );
+    like ? setDisplayLike(likeTrue) : setDisplayLike(likeFalse);
   }, [like]);
 
   return (
     <div>
       <h4>{copyright}</h4>
-      <div>{display()}</div>
-      {/* {if (media_type === "video") {
-        <video src={url} loop/>
-      } else {
-        <img src={hdurl} alt={title} height="500"/>}
-      } */}
+      <img src={hdurl} alt={title} height="500" />
       <button onClick={() => setLike(!like)}>{displayLike}</button>
       <p>
         <span>{title}</span>
