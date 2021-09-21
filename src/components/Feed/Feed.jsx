@@ -1,20 +1,26 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
-import Post from '../Post/Post';
-import { apiURL } from '../../services/apiConfig';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Post from "../Post/Post";
+import { apiURL } from "../../services/apiConfig";
 
 const Feed = () => {
+  const [posts, setPosts] = useState([]);
+
+  const searchParam = "count=5";
+
   useEffect(() => {
-    const fetchData = async() => {
-      const res = await axios.get(apiURL)
-      console.log(res)
-    }
-    fetchData()
-  })
+    const fetchData = async () => {
+      const res = await axios.get(`${apiURL}&${searchParam}`);
+      setPosts(res.data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div>
-      FEED
-      <Post />
+      {posts.map((post) => (
+        <Post post={post} />
+      ))}
     </div>
   );
 };

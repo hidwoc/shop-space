@@ -1,18 +1,15 @@
 import React, { useEffect } from 'react';
-import axios from 'axios';
-import { apiURL } from '../../services/apiConfig';
 
-const Post = () => {
-  useEffect(() => {
-    const fetchData = async() => {
-      const res = await axios.get(apiURL)
-      console.log(res)
-    }
-    fetchData()
-  })
+const Post = ({post}) => {
+  const { copyright, date, explanation, hdurl, title} = post
+
   return (
     <div>
-      POST
+      <h3>{title}</h3>
+      <h5>{date}</h5>
+      <img src={hdurl} alt={title} height="500"/>
+      <p>{explanation}</p>
+      <h4>{copyright}</h4>
     </div>
   );
 };
