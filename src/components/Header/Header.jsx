@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div>
-      HEADER
-    </div>
+    <header>
+      <h1>Spacestagram</h1>
+    </header>
   );
 };
 

@@ -27,3 +27,7 @@ Examples:
 - include link to hosted code for testing (ex. CodeSandbox, Github pages, Netlify and Heroku)
 - link to Github repo
 - any other notes for consideration
+
+# Resources
+
+Heart icon by Icons8
