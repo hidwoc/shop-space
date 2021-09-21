@@ -12,15 +12,10 @@
 
 # Extras
 
-(1 or 2 recommended)
-
-Examples:
-
-- save likes if user leaves and reloads the page
-- animate the like action (ex. heart)
-- add loading state
-- create shareable links for each image
-- add date-picker to be able to browse photos starting from specific date
+- animate like button
+- add Loading message
+- add media queries
+  - overflow-x scrollable in order not to warp images on smaller screens but still allow user to view entire image
 
 # Submission Details
 
