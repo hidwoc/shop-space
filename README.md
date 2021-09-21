@@ -1,5 +1,7 @@
 # Spacestagram
 
+Deployed Site: https://hsc-spacestagram.netlify.app/
+
 # Requirements
 
 - Fetch data from NASA API
@@ -25,5 +27,5 @@
 
 # Resources
 
-Heart icon by Icons8
-Crescent Moon icon by Icons8
+- Heart icon by Icons8
+- Crescent Moon icon by Icons8
