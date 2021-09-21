@@ -16,11 +16,12 @@ const Feed = () => {
 
   return (
     <main>
-      {posts
+      {posts ? posts
         .filter((post) => post.media_type === "image")
         .map((post) => (
           <Post key={post.date} post={post} />
-        ))}
+        )) :
+        <h2> Loading... </h2>}
     </main>
   );
 };
