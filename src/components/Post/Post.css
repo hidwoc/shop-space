@@ -27,7 +27,11 @@
 }
 
 div.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   width: 50%
+
 }
 button {
   background-color: #0B0B45;
