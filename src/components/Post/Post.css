@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 25px;
 }
 
 .post-image {
@@ -10,11 +11,12 @@
 }
 
 .post-image img {
+  max-width: 90vw;
   height: 500px;
   object-fit: cover;
 }
 
-.copy-like {
+.title-like {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,17 +24,18 @@
   width: 100%;
 }
 
-.copy-like h4 {
+.title-like h4 {
   width: 50%;
 }
 
-div.button {
+div.date-button {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   width: 50%
-
 }
+
 button {
   background-color: #0B0B45;
   border: none;
@@ -41,8 +44,9 @@ button {
 
 p {
   font-size: 15px;
+  line-height: 20px;
 }
 
 span {
-  font-weight: bold;
+  font-style: italic;
 }

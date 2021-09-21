@@ -16,17 +16,18 @@ const Post = ({ post }) => {
       <div className="post-image">
         <img src={hdurl} alt={title} />
       </div>
-      <div className="copy-like">
-        <h4>{copyright}</h4>
-        <div className="button">
-        <button onClick={() => setLike(!like)}>{displayLike}</button>
-          </div>
+      <div className="title-like">
+        <h4>{title}</h4>
+        <div className="date-button">
+          <p>{date}</p>
+          <button onClick={() => setLike(!like)}>{displayLike}</button>
+        </div>
       </div>
       <p>
-        <span>{title}</span><br></br>
         {explanation}
+        <br></br>
+        {copyright ? <span>-{copyright}</span> : null}
       </p>
-      <h5>{date}</h5>
     </div>
   );
 };

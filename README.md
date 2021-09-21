@@ -31,3 +31,4 @@ Examples:
 # Resources
 
 Heart icon by Icons8
+Crescent Moon icon by Icons8
