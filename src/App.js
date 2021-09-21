@@ -1,19 +1,13 @@
-import axios from 'axios';
 import './App.css';
-import { useEffect } from 'react';
-import { apiURL } from './services/apiConfig';
+import Feed from './components/Feed/Feed';
+import Layout from './Layout/Layout';
 
 function App() {
-  useEffect(() => {
-    const fetchData = async() => {
-      const res = await axios.get(apiURL)
-      console.log(res)
-    }
-    fetchData()
-  })
   return (
     <div className="App">
-      APP
+      <Layout >
+        <Feed />
+      </Layout>
     </div>
   );
 }
