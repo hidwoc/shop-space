@@ -6,27 +6,20 @@ import { apiURL } from "../../services/apiConfig";
 const Feed = () => {
   const [posts, setPosts] = useState([]);
 
-  const today = new Date().toJSON().slice(0,10)
-  const searchParam = "count=5";
-  // start_date=${today}
-
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get(`${apiURL}&${searchParam}`);
+      const res = await axios.get(`${apiURL}&count=10`);
       setPosts(res.data);
     };
     fetchData();
   }, []);
 
   return (
-    <div>
-      <form>
-        <input type="date" value={today}/>
-      </form>
+    <main>
       {posts.map((post) => (
         <Post post={post} />
       ))}
-    </div>
+    </main>
   );
 };
 

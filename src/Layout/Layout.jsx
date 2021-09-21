@@ -1,15 +1,13 @@
-import React from 'react';
-import Footer from '../components/Footer/Footer';
-import Header from '../components/Header/Header';
+import React from "react";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <div>
-      <Header />
-      <div className="layout-children">
-        {children}
-      </div>
-      <Footer />
+      <header>Spacestagram</header>
+      <div className="layout-children">{children}</div>
+      <footer>
+        Images brought to you NASA's APOD API 🌙 Created by Heidi Choi
+      </footer>
     </div>
   );
 };
